@@ -14,18 +14,31 @@ interface RankingTableProps {
   onToggleSort: (field: SortState["field"]) => void;
 }
 
+function InfoTip({ text }: { text: string }) {
+  return (
+    <span className="relative group ml-0.5 inline-flex">
+      <span className="text-text-muted hover:text-primary cursor-help text-[8px] align-super">i</span>
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-2 py-1.5 rounded-[var(--ds-radius-md)] bg-surface border border-border text-[10px] text-text-muted leading-snug w-48 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-[var(--ds-transition-fast)] z-20 ds-mono">
+        {text}
+      </span>
+    </span>
+  );
+}
+
 function SortHeader({
   field,
   label,
   sort,
   onToggle,
   className = "",
+  tooltip,
 }: {
   field: SortState["field"];
   label: string;
   sort: SortState;
   onToggle: (f: SortState["field"]) => void;
   className?: string;
+  tooltip?: string;
 }) {
   const isActive = sort.field === field;
   const arrow = isActive ? (sort.direction === "asc" ? " ▲" : " ▼") : "";
@@ -36,6 +49,7 @@ function SortHeader({
       className={`cursor-pointer hover:text-primary transition-colors duration-[var(--ds-transition-fast)] select-none ${className}`}
     >
       {label}
+      {tooltip && <InfoTip text={tooltip} />}
       {arrow}
     </th>
   );
@@ -86,10 +100,10 @@ export function RankingTable({
               <SortHeader field="ies" label={t("table.ies")} sort={sort} onToggle={onToggleSort} />
               <SortHeader field="uf" label={t("table.uf")} sort={sort} onToggle={onToggleSort} className="hidden sm:table-cell" />
               <th className="hidden md:table-cell">{t("table.rede")}</th>
-              <SortHeader field="enade_continuo" label={t("table.score")} sort={sort} onToggle={onToggleSort} />
-              <SortHeader field="conceito_enade" label={t("table.faixa")} sort={sort} onToggle={onToggleSort} />
-              <SortHeader field="nota_fg" label={t("table.fg")} sort={sort} onToggle={onToggleSort} className="hidden lg:table-cell" />
-              <SortHeader field="nota_ce" label={t("table.ce")} sort={sort} onToggle={onToggleSort} className="hidden lg:table-cell" />
+              <SortHeader field="enade_continuo" label={t("table.score")} sort={sort} onToggle={onToggleSort} tooltip={t("table.score_tip")} />
+              <SortHeader field="conceito_enade" label={t("table.faixa")} sort={sort} onToggle={onToggleSort} tooltip={t("table.faixa_tip")} />
+              <SortHeader field="nota_fg" label={t("table.fg")} sort={sort} onToggle={onToggleSort} className="hidden lg:table-cell" tooltip={t("table.fg_tip")} />
+              <SortHeader field="nota_ce" label={t("table.ce")} sort={sort} onToggle={onToggleSort} className="hidden lg:table-cell" tooltip={t("table.ce_tip")} />
             </tr>
           </thead>
           <tbody>
