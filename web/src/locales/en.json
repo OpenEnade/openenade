@@ -100,7 +100,7 @@
     "pipeline_step_4": "Ranking: compute national position within each (year, course) group, ordered by continuous score, with tiebreakers on CE and GE scores",
     "pipeline_step_5": "Export: generate one JSON per course/year, plus a general index (courses.json) for search",
     "data_extracted_title": "What we extract from each record",
-    "data_extracted_body": "From each row of the INEP XLSX, we extract: year, course, institution abbreviation and name, state, city, network (public/private), modality (in-person/distance), number of graduating participants, general education raw score (GE), specific component raw score (SC), ENADE continuous score, and concept (band). No personal student data is processed. All data is aggregated by institution.",
+    "data_extracted_body": "From each row of the INEP XLSX, we extract: year, course, institution abbreviation and name, state, city, network (public/private), modality (in-person/distance), number of graduating participants, general education raw score (GE), specific component raw score (SC), ENADE continuous score, and concept (band). INEP data is aggregated by institution.",
     "datasets_title": "Datasets used",
     "datasets_body": "All files below are public and provided by INEP/MEC:",
     "datasets_year": "Year",

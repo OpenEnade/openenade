@@ -100,7 +100,7 @@
     "pipeline_step_4": "Ranking: cálculo da posição nacional dentro de cada grupo (ano, curso), ordenado por nota contínua, com desempate por nota CE e FG",
     "pipeline_step_5": "Exportação: geração de um JSON por curso/ano, mais um índice geral (courses.json) para busca",
     "data_extracted_title": "O que extraímos de cada registro",
-    "data_extracted_body": "De cada linha do XLSX do INEP, extraímos: ano, curso, sigla e nome da IES, UF, município, rede (pública/privada), modalidade (presencial/EAD), número de concluintes participantes, nota bruta de formação geral (FG), nota bruta do componente específico (CE), nota contínua do ENADE e conceito (faixa). Nenhum dado pessoal de estudantes é processado. Todos os dados são agregados por instituição.",
+    "data_extracted_body": "De cada linha do XLSX do INEP, extraímos: ano, curso, sigla e nome da IES, UF, município, rede (pública/privada), modalidade (presencial/EAD), número de concluintes participantes, nota bruta de formação geral (FG), nota bruta do componente específico (CE), nota contínua do ENADE e conceito (faixa). Os dados do INEP são agregados por instituição.",
     "datasets_title": "Datasets utilizados",
     "datasets_body": "Todos os arquivos abaixo são públicos e disponibilizados pelo INEP/MEC:",
     "datasets_year": "Ano",
