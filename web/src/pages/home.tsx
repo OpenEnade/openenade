@@ -118,6 +118,10 @@ export function Home() {
         {/* Course browser: search + grid */}
         {!selectedSlug && (
           <div className="py-4 sm:py-6">
+            {/* Onboarding */}
+            <p className="text-center text-text-muted text-[10px] sm:text-xs ds-mono mb-4">
+              {t("home.onboarding")}
+            </p>
             <div className="max-w-md mx-auto mb-4 sm:mb-6">
               <div className="flex items-center gap-2 border border-border rounded-[var(--ds-radius-md)] px-3 py-2 ds-mono text-sm focus-within:border-primary transition-colors duration-[var(--ds-transition-fast)]">
                 <span className="text-primary font-semibold">&gt;</span>

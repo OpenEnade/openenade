@@ -16,6 +16,13 @@ const BANDS = [
   { faixa: 5, min: "3.945", max: "5.000" },
 ];
 
+const DATASETS = [
+  { year: 2019, courses: 29, records: 8188, url: "https://download.inep.gov.br/educacao_superior/indicadores/resultados/2019/conceito_enade_2019.xlsx" },
+  { year: 2021, courses: 22, records: 7512, url: "https://download.inep.gov.br/educacao_superior/indicadores/resultados/2021/conceito_enade_2021.xlsx" },
+  { year: 2022, courses: 26, records: 8934, url: "https://download.inep.gov.br/educacao_superior/indicadores/resultados/2022/conceito_enade_2022.xlsx" },
+  { year: 2023, courses: 28, records: 9380, url: "https://download.inep.gov.br/educacao_superior/indicadores/resultados/2023/conceito_enade_2023.xlsx" },
+];
+
 export function Methodology() {
   const { t } = useTranslation();
 
@@ -28,6 +35,7 @@ export function Methodology() {
           {t("methodology.title")}
         </h1>
 
+        {/* What is ENADE */}
         <section className="mb-6">
           <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
             {t("methodology.what_is_enade")}
@@ -37,6 +45,7 @@ export function Methodology() {
           </p>
         </section>
 
+        {/* Cycle */}
         <section className="mb-6">
           <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
             {t("methodology.cycle_title")}
@@ -64,6 +73,7 @@ export function Methodology() {
           </div>
         </section>
 
+        {/* Score vs Concept */}
         <section className="mb-6">
           <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
             {t("methodology.score_title")}
@@ -91,6 +101,7 @@ export function Methodology() {
           </div>
         </section>
 
+        {/* Fair comparisons */}
         <section className="mb-6">
           <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
             {t("methodology.comparison_title")}
@@ -108,6 +119,80 @@ export function Methodology() {
           </div>
         </section>
 
+        <hr className="ds-separator" />
+
+        {/* ETL pipeline */}
+        <section className="mb-6">
+          <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
+            {t("methodology.pipeline_title")}
+          </h2>
+          <p className="text-sm text-text-muted leading-relaxed mb-3">
+            {t("methodology.pipeline_body")}
+          </p>
+          <div className="text-sm font-semibold mb-2 ds-mono text-[11px]">
+            {t("methodology.pipeline_steps_title")}
+          </div>
+          <ol className="text-sm text-text-muted leading-relaxed space-y-1.5 list-decimal list-inside">
+            <li>{t("methodology.pipeline_step_1")}</li>
+            <li>{t("methodology.pipeline_step_2")}</li>
+            <li>{t("methodology.pipeline_step_3")}</li>
+            <li>{t("methodology.pipeline_step_4")}</li>
+            <li>{t("methodology.pipeline_step_5")}</li>
+          </ol>
+        </section>
+
+        {/* What we extract */}
+        <section className="mb-6">
+          <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
+            {t("methodology.data_extracted_title")}
+          </h2>
+          <p className="text-sm text-text-muted leading-relaxed">
+            {t("methodology.data_extracted_body")}
+          </p>
+        </section>
+
+        {/* Datasets */}
+        <section className="mb-6">
+          <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
+            {t("methodology.datasets_title")}
+          </h2>
+          <p className="text-sm text-text-muted leading-relaxed mb-3">
+            {t("methodology.datasets_body")}
+          </p>
+          <div className="ds-panel overflow-hidden">
+            <table className="w-full text-xs ds-mono">
+              <thead>
+                <tr className="border-b border-border text-text-muted text-[10px] uppercase tracking-wider">
+                  <th className="px-3 py-2 text-left">{t("methodology.datasets_year")}</th>
+                  <th className="px-3 py-2 text-left">{t("methodology.datasets_courses")}</th>
+                  <th className="px-3 py-2 text-left">{t("methodology.datasets_records")}</th>
+                  <th className="px-3 py-2 text-left">{t("methodology.datasets_link")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DATASETS.map((d) => (
+                  <tr key={d.year} className="border-b border-border last:border-0">
+                    <td className="px-3 py-2 font-semibold">{d.year}</td>
+                    <td className="px-3 py-2 text-text-muted">{d.courses}</td>
+                    <td className="px-3 py-2 text-text-muted">{d.records.toLocaleString()}</td>
+                    <td className="px-3 py-2">
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-text transition-colors"
+                      >
+                        INEP/MEC
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Data source */}
         <section>
           <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
             {t("methodology.data_source")}
