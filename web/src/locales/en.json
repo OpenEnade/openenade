@@ -36,6 +36,8 @@
     "ce": "SC",
     "pub": "PUB",
     "priv": "PRIV",
+    "position_tip": "National ranking position for this course, ordered by continuous score.",
+    "rede_tip": "Network: public (federal, state, municipal) or private.",
     "score_tip": "ENADE continuous score (0 to 5). Higher means better performance by graduating students.",
     "faixa_tip": "Integer concept (1 to 5) assigned by MEC. Hides differences of up to 1 point.",
     "fg_tip": "General Education: raw score on the part of the exam that evaluates common competencies (reading, logic, ethics).",

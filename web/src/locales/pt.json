@@ -36,6 +36,8 @@
     "ce": "CE",
     "pub": "PUB",
     "priv": "PRIV",
+    "position_tip": "Posição no ranking nacional do curso, ordenada pela nota contínua.",
+    "rede_tip": "Rede: pública (federal, estadual, municipal) ou privada.",
     "score_tip": "Nota contínua do ENADE (0 a 5). Quanto maior, melhor o desempenho dos concluintes.",
     "faixa_tip": "Conceito inteiro (1 a 5) atribuído pelo MEC. Esconde diferenças de até 1 ponto.",
     "fg_tip": "Formação Geral: nota bruta na parte da prova que avalia competências comuns (interpretação, lógica, ética).",

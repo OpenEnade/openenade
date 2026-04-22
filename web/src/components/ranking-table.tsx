@@ -96,10 +96,13 @@ export function RankingTable({
           <thead>
             <tr className="text-left text-text-muted text-[9px] sm:text-[10px] uppercase tracking-wider border-b border-border">
               <th className="px-1.5 sm:px-2.5 py-2 w-6 sm:w-8" />
-              <SortHeader field="posicao" label={t("table.position")} sort={sort} onToggle={onToggleSort} />
+              <SortHeader field="posicao" label={t("table.position")} sort={sort} onToggle={onToggleSort} tooltip={t("table.position_tip")} />
               <SortHeader field="ies" label={t("table.ies")} sort={sort} onToggle={onToggleSort} />
               <SortHeader field="uf" label={t("table.uf")} sort={sort} onToggle={onToggleSort} className="hidden sm:table-cell" />
-              <th className="hidden md:table-cell">{t("table.rede")}</th>
+              <th className="hidden md:table-cell">
+                {t("table.rede")}
+                <InfoTip text={t("table.rede_tip")} />
+              </th>
               <SortHeader field="enade_continuo" label={t("table.score")} sort={sort} onToggle={onToggleSort} tooltip={t("table.score_tip")} />
               <SortHeader field="conceito_enade" label={t("table.faixa")} sort={sort} onToggle={onToggleSort} tooltip={t("table.faixa_tip")} />
               <SortHeader field="nota_fg" label={t("table.fg")} sort={sort} onToggle={onToggleSort} className="hidden lg:table-cell" tooltip={t("table.fg_tip")} />
