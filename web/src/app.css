@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "@joivo/design-system";
+
+/*
+  Tailwind v4: map design system tokens to Tailwind utilities.
+  This lets us use bg-surface, text-primary, etc. in className.
+*/
+@theme inline {
+  --color-background: var(--ds-background);
+  --color-surface: var(--ds-surface);
+  --color-surface-alt: var(--ds-surface-alt);
+  --color-text: var(--ds-text);
+  --color-text-muted: var(--ds-text-muted);
+  --color-primary: var(--ds-primary);
+  --color-secondary: var(--ds-secondary);
+  --color-border: var(--ds-border);
+  --color-border-focus: var(--ds-border-focus);
+  --color-success: var(--ds-success);
+  --color-warning: var(--ds-warning);
+  --color-error: var(--ds-error);
+  --color-info: var(--ds-info);
+}
