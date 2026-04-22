@@ -103,6 +103,16 @@ export function Methodology() {
           </div>
         </section>
 
+        {/* FG and CE */}
+        <section className="mb-6">
+          <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
+            {t("methodology.components_title")}
+          </h2>
+          <p className="text-sm text-text-muted leading-relaxed">
+            {t("methodology.components_body")}
+          </p>
+        </section>
+
         {/* Fair comparisons */}
         <section className="mb-6">
           <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">

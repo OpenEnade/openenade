@@ -87,6 +87,8 @@
     "cycle_areas": "Áreas avaliadas",
     "score_title": "Nota contínua vs Conceito (Faixa)",
     "score_body": "O INEP calcula uma nota contínua de 0 a 5 para cada curso. Essa nota é então convertida em um \"Conceito Enade\" de 1 a 5 (inteiro). O problema: cursos com notas muito diferentes podem receber o mesmo conceito. Um curso com nota 2.95 e outro com 3.94 recebem ambos Conceito 4.",
+    "components_title": "FG e CE: os dois componentes da prova",
+    "components_body": "A prova do ENADE é dividida em duas partes. A Formação Geral (FG) avalia competências comuns a todos os cursos: interpretação de texto, raciocínio lógico, ética, cidadania e conhecimentos gerais. A segunda parte, Componente Específico (CE), avalia os conteúdos técnicos do curso (ex: anatomia em Medicina, cálculo estrutural em Engenharia Civil). A nota contínua final combina ambas, com peso maior para o CE. Mostrar FG e CE separadamente permite identificar se uma instituição é forte na formação técnica, na formação geral, ou em ambas.",
     "comparison_title": "Comparações justas",
     "comparison_body": "Comparações no OpenEnade são sempre entre instituições que fizeram a mesma prova no mesmo ano. Isso garante que a comparação é justa: mesma prova, mesmo critério de correção, mesma coorte de alunos.",
     "caveat_title": "Atenção sobre comparações entre anos",

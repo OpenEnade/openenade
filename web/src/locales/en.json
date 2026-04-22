@@ -87,6 +87,8 @@
     "cycle_areas": "Areas evaluated",
     "score_title": "Continuous score vs Concept (Band)",
     "score_body": "INEP calculates a continuous score from 0 to 5 for each course. This score is then converted into an integer \"ENADE Concept\" from 1 to 5. The problem: courses with very different scores can receive the same concept. A course scoring 2.95 and another scoring 3.94 both receive Concept 4.",
+    "components_title": "GE and SC: the two exam components",
+    "components_body": "The ENADE exam is divided into two parts. General Education (GE) evaluates competencies common to all courses: reading comprehension, logical reasoning, ethics, citizenship, and general knowledge. The second part, Specific Component (SC), evaluates the technical content of the course (e.g., anatomy in Medicine, structural analysis in Civil Engineering). The final continuous score combines both, with higher weight on SC. Showing GE and SC separately allows identifying whether an institution excels in technical training, general education, or both.",
     "comparison_title": "Fair comparisons",
     "comparison_body": "Comparisons on OpenEnade are always between institutions that took the same exam in the same year. This ensures fairness: same test, same grading criteria, same student cohort.",
     "caveat_title": "Note about cross-year comparisons",
