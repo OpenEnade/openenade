@@ -72,6 +72,30 @@ def test_normalize_filters_sc_rows(sample_transformed_df: pl.DataFrame):
     assert "RMV" not in result["ies"].to_list()
 
 
+def test_normalize_adds_default_grau_when_missing():
+    """Pre-2021 data has no grau_academico column. Should default to 'Bacharelado'."""
+    df = pl.DataFrame(
+        {
+            "ano": [2019],
+            "area_de_avaliacao": ["MEDICINA"],
+            "nome_da_ies": ["UFCG"],
+            "sigla_da_ies": ["UFCG"],
+            "categoria_administrativa": ["Pública Federal"],
+            "modalidade_de_ensino": ["Educação Presencial"],
+            "municipio_do_curso": ["Campina Grande"],
+            "sigla_da_uf": ["PB"],
+            "concluintes_participantes": [30],
+            "nota_bruta_fg": [45.0],
+            "nota_bruta_ce": [50.0],
+            "enade_continuo": [3.8],
+            "conceito_enade": ["4"],
+        }
+    )
+    result = normalize(df)
+    assert "grau" in result.columns
+    assert result["grau"][0] == "Bacharelado"
+
+
 def test_normalize_renames_output_columns(sample_transformed_df: pl.DataFrame):
     result = normalize(sample_transformed_df)
     expected = {

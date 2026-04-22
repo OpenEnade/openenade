@@ -25,7 +25,7 @@ Pipeline ETL que processa os XLSX do INEP e gera JSON estático por curso/ano.
 ```bash
 cd etl
 uv sync --dev
-uv run pytest -v                    # 20 testes
+uv run pytest -v                    # 31 testes (95% cobertura)
 uv run python -m src.pipeline \
   data/raw/conceito_enade_2023.xlsx \
   data/output
@@ -61,7 +61,7 @@ GitHub Actions (`ci.yml`) roda em push/PR para `main`:
 
 | Job | O que faz |
 |-----|-----------|
-| ETL Tests | `uv sync --dev && uv run pytest -v` |
+| ETL Tests | `uv sync --dev && uv run pytest -v` (31 testes, 95% cobertura) |
 | Web Build | `npm ci && npm run build` (tsc + vite) |
 | Web Lint | `npm ci && npm run lint` (eslint) |
 | i18n Parity | Verifica que `pt.json` e `en.json` têm as mesmas chaves |
