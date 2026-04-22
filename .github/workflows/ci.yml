@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  etl-tests:
+    name: ETL Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: etl
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "latest"
+      - run: uv sync --dev
+      - run: uv run pytest -v --tb=short
+
+  web-build:
+    name: Web Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run build
+
+  web-lint:
+    name: Web Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+
+  i18n:
+    name: i18n Key Parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PT and EN have same keys
+        run: |
+          extract_keys() {
+            python3 -c "
+          import json, sys
+          def keys(obj, prefix=''):
+              for k, v in sorted(obj.items()):
+                  path = f'{prefix}.{k}' if prefix else k
+                  if isinstance(v, dict):
+                      yield from keys(v, path)
+                  else:
+                      yield path
+          data = json.load(open(sys.argv[1]))
+          for k in keys(data):
+              print(k)
+          " "$1"
+          }
+          pt_keys=$(extract_keys web/src/locales/pt.json)
+          en_keys=$(extract_keys web/src/locales/en.json)
+          diff <(echo "$pt_keys") <(echo "$en_keys") || {
+            echo "FAIL: pt.json and en.json have different keys"
+            exit 1
+          }
+          echo "i18n keys match between PT and EN"

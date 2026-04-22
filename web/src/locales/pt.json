@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "ranking": "Ranking",
+    "about": "Sobre",
+    "methodology": "Metodologia",
+    "lang_toggle": "EN"
+  },
+  "home": {
+    "title": "Ranking real das universidades brasileiras",
+    "subtitle": "Nota contínua do ENADE: sem arredondamento, sem marketing",
+    "search_placeholder": "Buscar curso... (ex: Medicina, Direito)",
+    "onboarding": "Escolha um curso para ver o ranking real das universidades. Selecione duas instituições para comparar notas.",
+    "stats": {
+      "courses_evaluated": "Cursos avaliados",
+      "highest_score": "Maior nota",
+      "trap_pct": "Faixa 4 abaixo de 3.2"
+    },
+    "filters": {
+      "label": "Filtros",
+      "uf": "UF",
+      "rede": "Rede",
+      "faixa": "Faixa",
+      "score_range": "Nota",
+      "results": "resultados",
+      "clear": "Limpar"
+    }
+  },
+  "table": {
+    "position": "#",
+    "ies": "IES",
+    "uf": "UF",
+    "rede": "Rede",
+    "score": "Nota Contínua",
+    "faixa": "Faixa",
+    "fg": "FG",
+    "ce": "CE",
+    "pub": "PUB",
+    "priv": "PRIV"
+  },
+  "compare": {
+    "title": "Comparação entre instituições",
+    "vs": "vs",
+    "breadcrumb_compare": "Comparar",
+    "metrics": "Comparativo de métricas",
+    "score_label": "Nota contínua",
+    "national_rank": "#{{position}} Nacional",
+    "participants": "Participantes",
+    "trap_title": "Armadilha do Conceito 4",
+    "trap_body": "{{ies_b}} tem Conceito {{faixa}}, mas sua nota contínua ({{score_b}}) está apenas {{diff_low}} pontos acima do limite inferior da faixa. {{ies_a}}, com {{score_a}}, está {{diff}} pontos à frente.",
+    "evolution": "Evolução da nota",
+    "evolution_single_year": "Dados de apenas um ano disponível. O gráfico será populado quando mais anos forem processados.",
+    "select_ies": "Selecionar IES"
+  },
+  "about": {
+    "title": "Sobre o OpenEnade",
+    "what_is_openenade": "O que é o OpenEnade?",
+    "openenade_body": "O OpenEnade expõe a nota contínua do ENADE, permitindo comparações justas entre instituições de ensino superior. Enquanto o MEC divulga apenas o Conceito Enade (uma nota inteira de 1 a 5), nós mostramos a nota contínua real que está por trás desse conceito.",
+    "what_is_enade": "O que é o ENADE?",
+    "what_is_enade_body": "O Exame Nacional de Desempenho dos Estudantes (ENADE) é aplicado pelo INEP/MEC para avaliar os concluintes de cursos de graduação. A prova mede o desempenho em relação a conteúdos programáticos, competências e habilidades necessárias à formação profissional.",
+    "what_is_conceito": "O problema do Conceito Enade",
+    "conceito_body": "O Conceito Enade é uma nota de 1 a 5 atribuída a cada curso. O problema é que essa nota inteira esconde a nota contínua real. Cada faixa cobre um intervalo de aproximadamente 1 ponto (por exemplo, Conceito 4 vai de 2.945 a 3.944). Isso significa que dois cursos com notas completamente diferentes, como 2.95 e 3.94, aparecem com o mesmo Conceito 4 nos rankings do MEC. Para o estudante, a consequência é direta: ele pode escolher uma universidade achando que tem o mesmo nível de outra, quando na prática a diferença de qualidade entre elas é enorme. Em Medicina 2023, por exemplo, 33% dos cursos com Conceito 4 tinham nota abaixo de 3.2, enquanto outros na mesma faixa passavam de 3.7. Sem acesso à nota contínua, essa informação é invisível.",
+    "origin_title": "Origem: UFCG, 2019",
+    "origin_body": "O OpenEnade nasceu como RUE (Ranking Universitário Enade), projeto final da disciplina de Engenharia de Software do curso de Ciência da Computação da Universidade Federal de Campina Grande (UFCG), na Paraíba. A proposta era simples mas poderosa: expor a nota contínua do ENADE que o MEC calcula mas esconde atrás de conceitos inteiros.",
+    "what_happened_title": "O que aconteceu",
+    "what_happened_body": "O projeto original usava Go + Solr + React 16, hospedado no Heroku. Funcionou até novembro de 2022, quando o Heroku encerrou seu tier gratuito. O último commit foi em abril de 2021. Os repositórios originais continuam públicos no GitHub como registro histórico.",
+    "resurrection_title": "O retorno, 2026",
+    "resurrection_body": "Em abril de 2026, Emanuel Joivo (@joivo), um dos membros do time original, ressuscitou o projeto com uma arquitetura totalmente nova: ETL em Python/Polars, frontend em React 19 + Vite, sem backend (dados estáticos pré-processados). A motivação continua a mesma: dar transparência real aos dados do ENADE para estudantes que precisam escolher onde estudar.",
+    "team_title": "Quem fez acontecer",
+    "team_body": "O OpenEnade é resultado do trabalho de ex-alunos do curso de Ciência da Computação da UFCG.",
+    "tech_title": "Stack atual",
+    "tech_body": "ETL: Python 3.12+ com Polars para processar XLSX do INEP. Frontend: React 19, Vite 7, TypeScript 5.9, Tailwind 4. Design system próprio (@joivo/design-system). Sem backend: os dados JSON são gerados pelo ETL e servidos como arquivos estáticos. Hospedagem em Cloudflare Pages.",
+    "data_source": "Fonte dos dados",
+    "data_source_body": "Todos os dados são públicos e obtidos diretamente do portal do INEP/MEC (download.inep.gov.br). O OpenEnade não altera os dados, apenas processa, organiza e expõe a nota contínua que o INEP já calcula mas não destaca.",
+    "band_table": {
+      "title": "Faixas do Conceito Enade",
+      "faixa": "Conceito",
+      "range": "Faixa de nota contínua"
+    }
+  },
+  "methodology": {
+    "title": "Metodologia",
+    "what_is_enade": "O que é o ENADE?",
+    "what_is_enade_body": "O Exame Nacional de Desempenho dos Estudantes (ENADE) é aplicado pelo INEP/MEC para avaliar os concluintes de cursos de graduação. A prova mede o desempenho em relação a conteúdos programáticos, competências e habilidades necessárias ao aprofundamento da formação geral e profissional.",
+    "cycle_title": "Ciclo avaliativo trienal",
+    "cycle_body": "O ENADE avalia cursos diferentes a cada ano, em um ciclo de 3 anos. Isso significa que um mesmo curso (ex: Medicina) é avaliado a cada 3 anos, e os resultados só podem ser comparados entre instituições que fizeram a mesma prova no mesmo ano.",
+    "cycle_year": "Ciclo",
+    "cycle_areas": "Áreas avaliadas",
+    "score_title": "Nota contínua vs Conceito (Faixa)",
+    "score_body": "O INEP calcula uma nota contínua de 0 a 5 para cada curso. Essa nota é então convertida em um \"Conceito Enade\" de 1 a 5 (inteiro). O problema: cursos com notas muito diferentes podem receber o mesmo conceito. Um curso com nota 2.95 e outro com 3.94 recebem ambos Conceito 4.",
+    "comparison_title": "Comparações justas",
+    "comparison_body": "Comparações no OpenEnade são sempre entre instituições que fizeram a mesma prova no mesmo ano. Isso garante que a comparação é justa: mesma prova, mesmo critério de correção, mesma coorte de alunos.",
+    "caveat_title": "Atenção sobre comparações entre anos",
+    "caveat_body": "A nota contínua é padronizada em relação ao desempenho da coorte do ano. Uma nota 3.5 em 2019 e uma nota 3.5 em 2023 não significam exatamente a mesma coisa, pois as provas e a padronização são diferentes. O gráfico de evolução mostra tendências, não valores absolutos comparáveis.",
+    "pipeline_title": "Como processamos os dados",
+    "pipeline_body": "Usamos um pipeline ETL (Extract, Transform, Load) e não ELT. A escolha é intencional: os dados do INEP chegam em XLSX com inconsistências entre anos (nomes de colunas diferentes, separadores decimais misturados, planilhas com nomes variados). Precisamos normalizar e validar antes de disponibilizar, não depois. Carregar dados sujos num banco e transformar depois seria arriscado para um projeto que precisa de dados confiáveis desde o primeiro acesso.",
+    "pipeline_steps_title": "Etapas do pipeline",
+    "pipeline_step_1": "Ingestão: leitura dos XLSX do INEP, detecção automática da planilha de dados (o nome muda entre anos)",
+    "pipeline_step_2": "Transformação: normalização de colunas (remoção de asteriscos, espaços, acentos), correção de separadores decimais (vírgula para ponto no dataset de 2022)",
+    "pipeline_step_3": "Normalização: mapeamento de rede (Pública Federal/Estadual/Municipal para PUBLICA, demais para PRIVADA), modalidade, padronização de texto, remoção de registros SC (Sem Conceito)",
+    "pipeline_step_4": "Ranking: cálculo da posição nacional dentro de cada grupo (ano, curso), ordenado por nota contínua, com desempate por nota CE e FG",
+    "pipeline_step_5": "Exportação: geração de um JSON por curso/ano, mais um índice geral (courses.json) para busca",
+    "data_extracted_title": "O que extraímos de cada registro",
+    "data_extracted_body": "De cada linha do XLSX do INEP, extraímos: ano, curso, sigla e nome da IES, UF, município, rede (pública/privada), modalidade (presencial/EAD), número de concluintes participantes, nota bruta de formação geral (FG), nota bruta do componente específico (CE), nota contínua do ENADE e conceito (faixa). Os dados do INEP são agregados por instituição.",
+    "datasets_title": "Datasets utilizados",
+    "datasets_body": "Todos os arquivos abaixo são públicos e disponibilizados pelo INEP/MEC:",
+    "datasets_year": "Ano",
+    "datasets_courses": "Cursos",
+    "datasets_records": "Registros",
+    "datasets_link": "Fonte",
+    "data_source": "Fonte dos dados",
+    "data_source_body": "Todos os dados são públicos e obtidos diretamente do portal do INEP/MEC (download.inep.gov.br). O OpenEnade não altera os dados, apenas processa, organiza e expõe a nota contínua que o INEP já calcula mas não destaca."
+  },
+  "footer": {
+    "data_source": "Dados: INEP/MEC | Conceito Enade 2019-2023",
+    "open_source": "Código aberto no GitHub"
+  }
+}

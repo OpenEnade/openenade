@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Node
+node_modules/
+*.tsbuildinfo
+.npm_cache/
+
+# Build output
+dist/
+web/dist/
+
+# ETL raw data (large XLSX files)
+etl/data/raw/*.xlsx
+etl/data/raw/*.csv
+
+# ETL generated output (regenerated from raw data)
+etl/data/output/*.json
+
+# Environment and secrets
+.env
+.env.*
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Superpowers brainstorm sessions
+.superpowers/
+
+# Development workflow docs (local only)
+docs/superpowers/
