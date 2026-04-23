@@ -107,6 +107,8 @@
     "team_body": "O OpenEnade é resultado do trabalho de ex-alunos do curso de Ciência da Computação da UFCG.",
     "tech_title": "Stack atual",
     "tech_body": "ETL: Python 3.12+ com Polars para processar XLSX do INEP. Frontend: React 19, Vite 7, TypeScript 5.9, Tailwind 4. Design system próprio (@joivo/design-system). Sem backend: os dados JSON são gerados pelo ETL e servidos como arquivos estáticos. Hospedagem em Cloudflare Pages.",
+    "github_org": "Organização OpenEnade",
+    "github_repo": "Repositório do projeto",
     "data_source": "Fonte dos dados",
     "data_source_body": "Todos os dados são públicos e obtidos diretamente do portal do INEP/MEC (download.inep.gov.br). O OpenEnade não altera os dados, apenas processa, organiza e expõe a nota contínua que o INEP já calcula mas não destaca.",
     "band_table": {

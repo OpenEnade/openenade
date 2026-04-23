@@ -66,17 +66,24 @@ GitHub Actions (`ci.yml`) roda em push/PR para `main`:
 | Web Lint | `npm ci && npm run lint` (eslint) |
 | i18n Parity | Verifica que `pt.json` e `en.json` têm as mesmas chaves |
 
+## SEO e Social Previews
+
+O `npm run build` gera, alem do bundle Vite:
+
+- `dist/sitemap.xml` -- 108 URLs indexaveis
+- `dist/og/*.png` -- 106 imagens 1200x630 para previews sociais (satori + resvg)
+- `worker/src/courses.ts` -- metadados dos cursos para o Worker
+
+Alem disso: `robots.txt` (bloqueia `/comparar`), `SeoHead` com `og:image`, `twitter:card` e JSON-LD por pagina.
+
+Um Cloudflare Worker intercepta bots sociais e retorna HTML com meta tags corretas sem SSR. Detalhes em [`worker/README.md`](worker/README.md).
+
 ## Deploy
 
-Cloudflare Pages com `wrangler.jsonc`:
-
 ```bash
-cd web
-npm run build
-npx wrangler pages deploy dist/ --project-name openenade
+cd web && npm run build
+cd .. && npx wrangler deploy
 ```
-
-Configuração SPA: `not_found_handling: "single-page-application"` redireciona rotas desconhecidas para `index.html`, onde o React Router renderiza a página 404 ou a rota correta.
 
 ## Origem
 

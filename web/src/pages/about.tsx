@@ -105,6 +105,39 @@ export function About() {
           </p>
         </section>
 
+        {/* GitHub */}
+        <section className="mb-6">
+          <h2 className="text-sm font-semibold mb-2 ds-mono ds-prefix">
+            GitHub
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <a
+              href="https://github.com/OpenEnade"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ds-panel px-3 py-2.5 ds-row-hover flex items-center gap-2 flex-1"
+            >
+              <span className="text-primary ds-mono text-xs font-semibold">&gt;</span>
+              <div>
+                <div className="text-[11px] font-semibold ds-mono">{t("about.github_org")}</div>
+                <div className="text-[9px] text-text-muted ds-mono">github.com/OpenEnade</div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/OpenEnade/openenade"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ds-panel px-3 py-2.5 ds-row-hover flex items-center gap-2 flex-1"
+            >
+              <span className="text-primary ds-mono text-xs font-semibold">&gt;</span>
+              <div>
+                <div className="text-[11px] font-semibold ds-mono">{t("about.github_repo")}</div>
+                <div className="text-[9px] text-text-muted ds-mono">github.com/OpenEnade/openenade</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
         <hr className="ds-separator" />
 
         {/* Origin */}
