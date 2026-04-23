@@ -5,7 +5,11 @@ import { NavBar } from "../components/nav-bar";
 import { Footer } from "../components/footer";
 import { SeoHead } from "../components/seo-head";
 import { CompareCards } from "../components/compare-cards";
+import { PositionContext } from "../components/position-context";
 import { MetricBars } from "../components/metric-bars";
+import { ProfileAnalysis } from "../components/profile-analysis";
+import { FaixaProximity } from "../components/faixa-proximity";
+import { SampleSizeCallout } from "../components/sample-size-callout";
 import { TrapCallout } from "../components/trap-callout";
 import { EvolutionChart } from "../components/evolution-chart";
 import { useCourseData } from "../hooks/use-course-data";
@@ -107,7 +111,11 @@ export function Compare() {
         </div>
 
         <CompareCards a={avalA} b={avalB} />
+        <PositionContext a={avalA} b={avalB} allAvaliacoes={courseData.avaliacoes} />
         <MetricBars metrics={metrics} />
+        <ProfileAnalysis a={avalA} b={avalB} />
+        <FaixaProximity a={avalA} b={avalB} />
+        <SampleSizeCallout a={avalA} b={avalB} />
         <TrapCallout a={avalA} b={avalB} />
         <EvolutionChart
           data={chartData}
