@@ -75,9 +75,10 @@ export function Compare() {
       valueA: avalA.enade_continuo,
       valueB: avalB.enade_continuo,
       max: 5,
+      tooltip: t("compare.tip_score"),
     },
-    { label: "FG", valueA: avalA.nota_fg, valueB: avalB.nota_fg, max: 100 },
-    { label: "CE", valueA: avalA.nota_ce, valueB: avalB.nota_ce, max: 100 },
+    { label: "FG", valueA: avalA.nota_fg, valueB: avalB.nota_fg, max: 100, tooltip: t("compare.tip_fg") },
+    { label: "CE", valueA: avalA.nota_ce, valueB: avalB.nota_ce, max: 100, tooltip: t("compare.tip_ce") },
   ];
 
   return (

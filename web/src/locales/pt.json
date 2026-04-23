@@ -74,7 +74,20 @@
     "faixa_at_max": "No topo da escala (Conceito 5)",
     "sample_title": "Contexto amostral",
     "sample_large_diff": "{{ies_large}} teve {{n_large}} participantes vs {{n_small}} em {{ies_small}}. Amostras maiores produzem notas mais estáveis.",
-    "sample_both_small": "Ambas as instituições tiveram menos de {{threshold}} participantes. As notas podem ser menos estáveis."
+    "sample_both_small": "Ambas as instituições tiveram menos de {{threshold}} participantes. As notas podem ser menos estáveis.",
+    "tip_score": "Nota contínua do ENADE (0 a 5). Quanto maior, melhor o desempenho dos concluintes.",
+    "tip_faixa": "Conceito inteiro (1 a 5) atribuído pelo MEC. Esconde diferenças de até 1 ponto na nota real.",
+    "tip_rede": "Rede: pública (federal, estadual, municipal) ou privada.",
+    "tip_modalidade": "Modalidade do curso: presencial ou a distância (EAD).",
+    "tip_participants": "Número de concluintes que participaram da prova. Amostras maiores produzem notas mais confiáveis.",
+    "tip_position_context": "Onde cada IES se posiciona no ranking nacional do curso, comparada com a média de todas as IES avaliadas.",
+    "tip_metrics": "Comparação direta das notas. Nota contínua (0-5), Formação Geral e Componente Específico (0-100).",
+    "tip_fg": "Formação Geral: nota na parte da prova que avalia competências comuns (interpretação, lógica, ética).",
+    "tip_ce": "Componente Específico: nota na parte da prova que avalia o conteúdo técnico do curso.",
+    "tip_profile": "Analisa se a IES é mais forte em formação geral (FG) ou conteúdo técnico (CE), baseado na proporção entre as notas.",
+    "tip_faixa_proximity": "Mostra quão perto cada IES está de subir ou descer de faixa no conceito MEC.",
+    "tip_trap": "Alerta quando duas IES têm o mesmo conceito mas notas muito diferentes, evidenciando a distorção da faixa.",
+    "tip_evolution": "Evolução da nota contínua ao longo dos ciclos avaliativos. Notas de anos diferentes não são diretamente comparáveis."
   },
   "about": {
     "title": "Sobre o OpenEnade",

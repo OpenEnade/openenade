@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import type { Avaliacao } from "../types";
+import { InfoTip } from "./info-tip";
 
 interface ProfileAnalysisProps {
   a: Avaliacao;
@@ -83,7 +84,7 @@ export function ProfileAnalysis({ a, b }: ProfileAnalysisProps) {
   return (
     <div className="p-3 sm:p-4 border-b border-border">
       <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono">
-        {t("compare.profile_title")}
+        {t("compare.profile_title")}<InfoTip text={t("compare.tip_profile")} />
       </h4>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 mb-3">

@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { InfoTip } from "./info-tip";
 import {
   LineChart,
   Line,
@@ -26,7 +27,7 @@ export function EvolutionChart({ data, iesA, iesB }: EvolutionChartProps) {
   return (
     <div className="p-3 sm:p-4 border-b border-border">
       <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono">
-        {t("compare.evolution")}
+        {t("compare.evolution")}<InfoTip text={t("compare.tip_evolution")} />
       </h4>
       {data.length <= 1 && (
         <p className="text-text-muted text-[10px] sm:text-xs mb-3 ds-mono">

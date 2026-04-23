@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import type { Avaliacao } from "../types";
+import { InfoTip } from "./info-tip";
 
 interface TrapCalloutProps {
   a: Avaliacao;
@@ -33,7 +34,7 @@ export function TrapCallout({ a, b }: TrapCalloutProps) {
     <div className="p-3 sm:p-4 border-b border-border">
       <div className="border-l-2 border-l-warning px-2.5 sm:px-3.5 py-2 sm:py-2.5 text-[10px] sm:text-[11px] leading-relaxed">
         <div className="text-warning font-semibold text-[10px] uppercase tracking-wider mb-1 ds-mono">
-          {t("compare.trap_title")}
+          {t("compare.trap_title")}<InfoTip text={t("compare.tip_trap")} />
         </div>
         <div className="text-text-muted">
           {t("compare.trap_body", {

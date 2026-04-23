@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import type { Avaliacao } from "../types";
+import { InfoTip } from "./info-tip";
 
 interface PositionContextProps {
   a: Avaliacao;
@@ -93,7 +94,7 @@ export function PositionContext({ a, b, allAvaliacoes }: PositionContextProps) {
   return (
     <div className="p-3 sm:p-4 border-b border-border">
       <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono">
-        {t("compare.position_context")}
+        {t("compare.position_context")}<InfoTip text={t("compare.tip_position_context")} />
       </h4>
       <div className="grid grid-cols-2 gap-4 sm:gap-8">
         <PositionCard avaliacao={a} total={total} avg={avg} />

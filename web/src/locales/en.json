@@ -74,7 +74,20 @@
     "faixa_at_max": "At the top of the scale (Band 5)",
     "sample_title": "Sample context",
     "sample_large_diff": "{{ies_large}} had {{n_large}} participants vs {{n_small}} at {{ies_small}}. Larger samples produce more stable scores.",
-    "sample_both_small": "Both institutions had fewer than {{threshold}} participants. Scores may be less stable."
+    "sample_both_small": "Both institutions had fewer than {{threshold}} participants. Scores may be less stable.",
+    "tip_score": "ENADE continuous score (0 to 5). Higher means better performance by graduating students.",
+    "tip_faixa": "Integer concept (1 to 5) assigned by MEC. Hides differences of up to 1 point in the actual score.",
+    "tip_rede": "Network: public (federal, state, municipal) or private.",
+    "tip_modalidade": "Course modality: in-person or distance learning (EAD).",
+    "tip_participants": "Number of graduating students who took the exam. Larger samples produce more reliable scores.",
+    "tip_position_context": "Where each institution ranks nationally, compared to the average of all evaluated institutions.",
+    "tip_metrics": "Direct score comparison. Continuous score (0-5), General Education and Specific Component (0-100).",
+    "tip_fg": "General Education: score on the part of the exam evaluating common competencies (reading, logic, ethics).",
+    "tip_ce": "Specific Component: score on the part of the exam evaluating the course's technical content.",
+    "tip_profile": "Analyzes whether the institution is stronger in general education (GE) or technical content (SC), based on score ratio.",
+    "tip_faixa_proximity": "Shows how close each institution is to moving up or down a band in the MEC concept.",
+    "tip_trap": "Alerts when two institutions share the same concept but have very different scores, exposing the band distortion.",
+    "tip_evolution": "Score evolution across evaluation cycles. Scores from different years are not directly comparable."
   },
   "about": {
     "title": "About OpenEnade",

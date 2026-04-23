@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import type { Avaliacao } from "../types";
 import { FaixaBadge } from "./faixa-badge";
+import { InfoTip } from "./info-tip";
 
 interface CompareCardsProps {
   a: Avaliacao;
@@ -35,9 +36,10 @@ function Card({
       </div>
       <div className={`text-xl sm:text-[28px] font-bold ds-mono mb-0.5 ${scoreColor(avaliacao.enade_continuo)}`}>
         {avaliacao.enade_continuo.toFixed(4)}
+        <InfoTip text={t("compare.tip_score")} />
       </div>
       <div className="text-[10px] text-text-muted uppercase tracking-wider mb-3 flex items-center gap-2">
-        {t("compare.score_label")} <FaixaBadge value={avaliacao.conceito_enade} />
+        {t("compare.score_label")} <FaixaBadge value={avaliacao.conceito_enade} /><InfoTip text={t("compare.tip_faixa")} />
       </div>
       <div className="text-[10px] text-text-muted leading-relaxed ds-mono space-y-0.5 sm:space-y-0">
         <div>
@@ -45,11 +47,11 @@ function Card({
           <span className="text-text">{avaliacao.municipio}</span>
         </div>
         <div>
-          Rede: <span className="text-text">{avaliacao.rede}</span> |
-          Modalidade: <span className="text-text">{avaliacao.modalidade}</span>
+          Rede: <span className="text-text">{avaliacao.rede}</span><InfoTip text={t("compare.tip_rede")} /> |
+          Modalidade: <span className="text-text">{avaliacao.modalidade}</span><InfoTip text={t("compare.tip_modalidade")} />
         </div>
         <div>
-          {t("compare.participants")}:{" "}
+          {t("compare.participants")}<InfoTip text={t("compare.tip_participants")} />:{" "}
           <span className="text-text">
             {avaliacao.concluintes_participantes ?? "--"}
           </span>
