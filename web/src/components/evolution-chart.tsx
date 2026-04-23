@@ -26,7 +26,7 @@ export function EvolutionChart({ data, iesA, iesB }: EvolutionChartProps) {
 
   return (
     <div className="p-3 sm:p-4 border-b border-border">
-      <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono">
+      <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono text-center">
         {t("compare.evolution")}<InfoTip text={t("compare.tip_evolution")} />
       </h4>
       {data.length <= 1 && (

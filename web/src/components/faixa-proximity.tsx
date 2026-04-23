@@ -77,7 +77,7 @@ export function FaixaProximity({ a, b }: FaixaProximityProps) {
 
   return (
     <div className="p-3 sm:p-4 border-b border-border">
-      <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono">
+      <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono text-center">
         {t("compare.faixa_proximity")}<InfoTip text={t("compare.tip_faixa_proximity")} />
       </h4>
       <div className="grid grid-cols-2 gap-4 sm:gap-8">

@@ -18,7 +18,7 @@ export function MetricBars({ metrics }: MetricBarsProps) {
 
   return (
     <div className="p-3 sm:p-4 border-b border-border">
-      <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono">
+      <h4 className="text-[10px] sm:text-[11px] text-text-muted uppercase tracking-wider mb-3 ds-mono text-center">
         {t("compare.metrics")}<InfoTip text={t("compare.tip_metrics")} />
       </h4>
       <div className="space-y-2 sm:space-y-2">
