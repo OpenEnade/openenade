@@ -5,7 +5,7 @@ export function Footer() {
 
   return (
     <footer className="text-center text-[10px] text-text-muted py-3 border-t border-border ds-mono">
-      {t("footer.data_source", { year: 2023 })}{" "}
+      {t("footer.data_source", { year: 2023 })} |{" "}
       <a
         href="https://github.com/OpenEnade/openenade"
         target="_blank"
