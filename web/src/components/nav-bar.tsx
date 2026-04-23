@@ -53,7 +53,7 @@ export function NavBar() {
             onClick={toggleTheme}
             className="hover:text-primary transition-colors duration-[var(--ds-transition-fast)] cursor-pointer"
           >
-            {theme === "dark" ? "LIGHT" : "DARK"}
+            {theme === "dark" ? "☀" : "☾"}
           </button>
           <button
             onClick={toggleLang}
