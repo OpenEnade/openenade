@@ -59,7 +59,16 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-background text-text flex flex-col">
-      <SeoHead />
+      <SeoHead
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "OpenEnade",
+          "url": "https://openenade.emanueljoivo.com",
+          "description": "Ranking real das universidades brasileiras com base na nota contínua do ENADE",
+          "applicationCategory": "EducationalApplication",
+        }}
+      />
       <NavBar />
 
       <div className="ds-container flex-1">

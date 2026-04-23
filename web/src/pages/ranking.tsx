@@ -74,6 +74,15 @@ export function Ranking() {
       <SeoHead
         title={`${courseData.curso} ${courseData.ano}`}
         description={`Ranking de ${courseData.curso} no ENADE ${courseData.ano}: ${courseData.total} IES avaliadas`}
+        ogImage={`https://openenade.emanueljoivo.com/og/${slug}.png`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          "name": `ENADE ${courseData.curso} ${courseData.ano}`,
+          "description": `Ranking de ${courseData.total} instituições no ENADE ${courseData.ano} para ${courseData.curso}`,
+          "url": `https://openenade.emanueljoivo.com/ranking/${slug}`,
+          "license": "https://opensource.org/licenses/MIT",
+        }}
       />
       <NavBar />
 

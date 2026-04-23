@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /comparar
+
+Sitemap: https://openenade.emanueljoivo.com/sitemap.xml

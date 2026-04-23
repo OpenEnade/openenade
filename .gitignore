@@ -41,6 +41,9 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+# Wrangler local state
+.wrangler/
+
 # Superpowers brainstorm sessions
 .superpowers/
 
